@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rainbow</title>
+    <style>
+        * {
+            /* 指定盒模型，消除固定样式*/
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 背景颜色*/
+            background: white;
+        }
+
+        /* 隐藏溢出的部分，只显示圆的上半*/
+        .rainbow {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        /* 七层同心的半圆，逐级缩小20px，颜色使用HSL色彩空间*/
+        .rainbow>div {
+            width: 400px;
+            height: 400px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div {
+            background: hsl(60, 80%, 50%);
+            height: 380px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div {
+            background: hsl(120, 80%, 50%);
+            height: 360px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div>div {
+            background: hsl(180, 80%, 50%);
+            height: 340px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div>div>div {
+            background: hsl(240, 80%, 50%);
+            height: 320px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div>div>div>div {
+            background: hsl(300, 80%, 50%);
+            height: 300px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div>div>div>div>div {
+            background: hsl(330, 80%, 50%);
+            height: 280px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rainbow>div>div>div>div>div>div>div>div {
+            background: hsl(330, 80%, 100%);
+            height: 260px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        /* 阻止顶部的外边距合并*/
+        .rainbow div {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rainbow">
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
